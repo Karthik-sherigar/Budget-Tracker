@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Budget Tracker</h1>
+            <button id="themeToggle" class="theme-btn">🌙</button>
+        </header>
+
+        <section class="budget-form">
+            <div class="form-group">
+                <input type="number" id="income" placeholder="Enter Monthly Income" />
+                <select id="category">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="number" id="expense" placeholder="Enter Expense" />
+                <button id="addBtn">Add Expense</button>
+            </div>
+        </section>
+
+        <section class="summary">
+            <div class="summary-box">
+                <h3>Income</h3>
+                <p id="incomeDisplay">$0</p>
+            </div>
+            <div class="summary-box">
+                <h3>Expenses</h3>
+                <p id="expenseDisplay">$0</p>
+            </div>
+            <div class="summary-box">
+                <h3>Savings</h3>
+                <p id="savingsDisplay">$0</p>
+            </div>
+        </section>
+
+        <section class="chart-container">
+            <canvas id="budgetChart"></canvas>
+        </section>
+
+        <section class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul id="transactionList"></ul>
+        </section>
+
+        <footer>
+            <button id="exportBtn" class="export-btn">Export CSV</button>
+            <p>Budget Tracker App &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
